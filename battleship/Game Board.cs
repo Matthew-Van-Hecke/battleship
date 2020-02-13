@@ -20,7 +20,7 @@ namespace battleship
             board = new string[height][];
             for (int i = 0; i < height; i++)
             {
-                board[i] = new string[20];
+                board[i] = new string[width];
                 for (int j = 0; j < width; j++)
                 {
                     board[i][j] = "O";
@@ -33,15 +33,15 @@ namespace battleship
         {
             for (int i = 0; i < width; i++)
             {
-                Console.Write("   " + i);
+                Console.Write("\t" + i);
             }
             Console.WriteLine("\n");
             for (int i = 0; i < board.Length; i++)
             {
-                Console.Write(i + " - ");
+                Console.Write(i + " -\t");
                 for (int j = 0; j < board[i].Length; j++)
                 {
-                    Console.Write(board[i][j] + "   ");
+                    Console.Write(board[i][j] + "\t");
                 }
                 Console.WriteLine("\n");
             }

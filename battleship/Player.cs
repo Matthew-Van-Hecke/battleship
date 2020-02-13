@@ -9,8 +9,8 @@ namespace battleship
     class Player
     {
         //Member variables
-        public string[] myGameBoard;
-        public string[] opponentGameBoard;
+        GameBoard myGameBoard;
+        GameBoard opponentGameBoard;
         public int score;
         List<Ship> myShips;
         List<Ship> opponentShipsISunk;
@@ -18,11 +18,11 @@ namespace battleship
         public Player()
         {
             //Create 2d arrays for 20x20 board here. These boards will change to reflect other player's moves
-            myGameBoard = new string[20];
-            opponentGameBoard = new string[20];
+            score = 0;
+            myGameBoard = new GameBoard(20, 20);
+            opponentGameBoard = new GameBoard(20, 20);
             myShips = new List<Ship>() { new Ship("Destroyer", 2), new Ship("Submarine", 3), new Ship("Battleship", 4), new Ship("Aircraft Carrier", 5)};
         }
         //Member Methods
-                //Print boards. Take in 2d array as parameter.
     }
 }
