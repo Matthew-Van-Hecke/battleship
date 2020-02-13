@@ -18,5 +18,9 @@ namespace battleship
             this.length = length;
         }
         //Member Methods
+        public void ShipHit()
+        {
+            length--;
+        }
     }
 }
