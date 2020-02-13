@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 
 namespace battleship
 {
-    class Player
+    abstract class Player
     {
         //Member variables
         GameBoard myGameBoard;
         GameBoard opponentGameBoard;
-        public int score;
         List<Ship> myShips;
-        List<Ship> opponentShipsISunk;
+        List<Ship> shipsISunk;
+        public int score;
+        Random random;
         //Constructor
-        public Player()
+        public Player(Random random)
         {
-            //Create 2d arrays for 20x20 board here. These boards will change to reflect other player's moves
+            this.random = random;
             score = 0;
+            //Create 2d arrays for 20x20 board here. These boards will change to reflect other player's moves
             myGameBoard = new GameBoard(20, 20);
             opponentGameBoard = new GameBoard(20, 20);
             myShips = new List<Ship>() { new Ship("Destroyer", 2), new Ship("Submarine", 3), new Ship("Battleship", 4), new Ship("Aircraft Carrier", 5)};
@@ -40,5 +42,6 @@ namespace battleship
             resultGameBoards.Add(boardBeingAttacked);
                 return resultGameBoards;
         }
+        public abstract void PlaceAShip(int shipLength);
     }
 }
