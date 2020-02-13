@@ -11,7 +11,7 @@ namespace battleship
         //Member Variables
         int width;
         int height;
-        string[][] board;
+        public string[][] board;
         //Constructor
         public GameBoard(int width, int height)
         {
@@ -31,9 +31,10 @@ namespace battleship
         //Member Methods
         public void PrintBoard()
         {
+            string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             for (int i = 0; i < width; i++)
             {
-                Console.Write("\t" + i);
+                Console.Write("\t" + alphabet[i]);
             }
             Console.WriteLine("\n");
             for (int i = 0; i < board.Length; i++)

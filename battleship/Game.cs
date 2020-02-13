@@ -18,6 +18,7 @@ namespace battleship
             //Print player one's board
             //Print what player two's board
             //He picks a position on player two's board
+            
                 //If picked position is occupied by one of player two's ships, register it as a hit, and subtract 1 from length of hit ship.
                 //Otherwise, register it as a miss.
         //Repeat steps for player two
