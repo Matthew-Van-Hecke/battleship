@@ -22,6 +22,7 @@ namespace battleship
         public void PlayGame()
         {
             playerOne = new Human(masterRandom);
+            playerOne.MyGameBoard.PrintBoard();
             //Print rules
             //Instantiate two players (each will have a board in the form of a two-dimensional array, and a list of ships)
             //Let players pick their names

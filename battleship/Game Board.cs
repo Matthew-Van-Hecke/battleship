@@ -25,7 +25,6 @@ namespace battleship
                 {
                     board[i][j] = "O";
                 }
-                Console.WriteLine("\n");
             }
         }
         //Member Methods

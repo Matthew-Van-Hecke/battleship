@@ -10,6 +10,10 @@ namespace battleship
     {
         //Member variables
         GameBoard myGameBoard;
+        public GameBoard MyGameBoard
+        {
+            get { return myGameBoard; }
+        }
         GameBoard opponentGameBoard;
         List<Ship> myShips;
         List<Ship> shipsISunk;
