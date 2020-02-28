@@ -21,6 +21,7 @@ namespace battleship
         //Member Methods
         public void PlayGame()
         {
+            Console.SetWindowSize(170, 40);
             playerOne = new Human(masterRandom);
             playerOne.MyGameBoard.PrintBoard();
             //Print rules
